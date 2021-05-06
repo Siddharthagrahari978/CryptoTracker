@@ -1,0 +1,17 @@
+{
+  "name": "bitcoin-price-feed-scraper",
+  "version": "1.0.0",
+  "description": "This is a webscrapping app which scraps the prices of current top ten crypto-currencies.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Siddharth Kumar",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cheerio": "*",
+    "express": "^4.17.1"
+  }
+}
