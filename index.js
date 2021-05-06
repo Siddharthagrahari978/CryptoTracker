@@ -68,7 +68,7 @@ app.get('/api/coinInfo', async (req, res) => {
     })
   }
 })
-const port = process.env.PORT || 5000
+const port = process.env.PORT
 app.listen(port, () => {
   console.log(`Server is live at http://localhost:${port}`);
 })

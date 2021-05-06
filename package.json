@@ -4,7 +4,7 @@
   "description": "This is a webscrapping app which scraps the prices of current top ten crypto-currencies.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "Siddharth Kumar",
