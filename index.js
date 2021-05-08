@@ -19,7 +19,7 @@ const getPriceFeed = async () => {
       'name',
       'price',
       '24h%',
-      '7h%',
+      '7d%',
       'marketCap',
       'volume',
       'circulatingSupply',
@@ -41,7 +41,7 @@ const getPriceFeed = async () => {
             
           }
           if(keyIdx === 3 || keyIdx === 4){
-            childElemVal = $(childElem).children().toString()
+            childElemVal = $(childElem).children().children().toString() + $(childElem).text()
           }
 
           if(keyIdx === 8){
