@@ -21,7 +21,7 @@ const apicall = async () => {
   for(var i = 0; i <= 3; i++){
     topFour.innerHTML = topFour.innerHTML + 
     `<div class="col-md-3 mw-full">
-      <div class="card p-1">
+      <div class="card p-1 ml-15 mr-15">
         <div class="text-center">
           <h3 class="mt-0 mb-0">${data[i]['name']}</h3>
           <p class="text-muted">Price: ${data[i]['price']}</p>
