@@ -12,7 +12,7 @@ function caretColor(){
 
 
 let topFour = document.querySelector("#topFour")
-
+let topTen = document.querySelector("#topTen")
 const url = '/api/coinInfo'
 const apicall = async () => {
   const response = await fetch(url)
@@ -46,8 +46,33 @@ const apicall = async () => {
       </div>
     </div>`
   }
+  for(var i = 4; i<data.length; i++){
+    topTen.innerHTML = topTen.innerHTML + 
+      `<div class="6th-10th row mb-15 mt-15 font-size-16">
+        <div class="col-md-1 font-weight-bold">${data[i]['rank']}</div>
+        <div class="col-md-2">${data[i]['name']}</div>
+        <div class="col-md-1">${data[i]['price']}</div>
+        <div class="col-md-1">${data[i]['24h%']}</div>
+        <div class="col-md-1">${data[i]['7d%']}</div>
+        <div class="col-md-2">${data[i]['marketCap']}</div>
+        <div class="col-md-2">${data[i]['volume']}</div>
+        <div class="col-md-2">${data[i]['circulatingSupply']}</div>
+      </div>`
+  }
   
   caretColor()
 }
 apicall()
 
+$(window).resize(function() {
+  if ($(window).width() <= 768) {
+      $("#topTen").addClass('text-center');
+      $(".6th-10th").addClass('pb-15');
+      document.querySelector("#tableTitles").style.display = 'none';
+  }
+  if ($(window).width() > 768) {
+    $("#topTen").removeClass('text-center');
+    $(".6th-10th").removeClass('pb-15');
+    document.querySelector("#tableTitles").style.display = 'block';
+  }
+});

@@ -31,36 +31,19 @@
     </div>
   </nav>
   <div class="m-5 p-5">
-    <div class="container-md col-md-10 pt-md-5">
-      <div class="row" id="topFour">
-      
-      
-      
-        <!-- <div class="col-md-3 mw-full">
-            
-                <div class="card p-1">
-                  <div>
-                    <h3 class="mt-0">Bitcoin</h3>
-                    <p class="text-muted">Price: $58,790.19</p>
-                    <div class="">
-                      Fluctuation(%):
-                      <div class="mt-0 content">
-                        24h: <span><span class="icon-Caret-up"></span>3.80%</span>
-                        <br>
-                        7d: <span><span class="icon-Caret-up"></span>1.83%</span>
-                      </div>
-            
-                    </div>
-                  </div>
-            
-                  <div class="border-left border-bottom mt-20">
-                    <img src="https://s3.coinmarketcap.com/generated/sparklines/web/7d/usd/1.png" alt="1-price-graph"
-                      class="tableGraph___c_IY- graphUp___2IEcj">
-                  </div>
-                </div>
-              </div> -->
-      
+    <div class="container-xl col-md-10 pt-md-5">
+      <div class="row" id="topFour"></div>
+      <div id='tableTitles' class="row card mb-0 pt-15 pb-15 font-size-16">
+        <div class="col-md-1">#</div>
+        <div class="col-md-2">Name</div>
+        <div class="col-md-1">Price</div>
+        <div class="col-md-1">24h%</div>
+        <div class="col-md-1">7d%</div>
+        <div class="col-md-2">Market Cap</div>
+        <div class="col-md-2">Volume</div>
+        <div class="col-md-2">Circulating Supply</div>
       </div>
+      <div class="card mt-10" id="topTen"></div>
     </div>
   </div>
 
@@ -68,6 +51,9 @@
 
 <!-- Halfmoon JS -->
 <script src="./assets/halfmoon.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="./assets/main.js"></script>
+
 <script src="https://kit.fontawesome.com/b99bead543.js" crossorigin="anonymous"></script>
 </html>
