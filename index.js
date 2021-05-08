@@ -2,6 +2,8 @@ const express = require('express')
 const cheerio = require('cheerio')
 const axios = require('axios')
 
+const http = require('http')
+
 const getPriceFeed = async () => {
   try {
     const siteURL = 'https://coinmarketcap.com/'
@@ -20,7 +22,8 @@ const getPriceFeed = async () => {
       '7h%',
       'marketCap',
       'volume',
-      'circulatingSupply'
+      'circulatingSupply',
+      'last7days'
     ]
 
     const coinArray = []
@@ -36,6 +39,13 @@ const getPriceFeed = async () => {
             
             childElemVal = $('p:first-child',$(childElem).html()).text()
             
+          }
+          if(keyIdx === 3 || keyIdx === 4){
+            childElemVal = $(childElem).children().toString()
+          }
+
+          if(keyIdx === 8){
+            childElemVal = $(childElem).children().children().toString()
           }
           
           if(childElemVal){
@@ -69,6 +79,11 @@ app.get('/api/coinInfo', async (req, res) => {
   }
 })
 const port = process.env.PORT
-app.listen(port, () => {
+
+const server = http.createServer(app)
+
+app.use(express.static('./public'))
+
+server.listen(port, () => {
   console.log(`Server is live at http://localhost:${port}`);
 })
