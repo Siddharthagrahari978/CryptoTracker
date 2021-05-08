@@ -26,16 +26,20 @@ const apicall = async () => {
           <h3 class="mt-0 mb-0">${data[i]['name']}</h3>
           <p class="text-muted">Price: ${data[i]['price']}</p>
           <div class="text-primary">
-            Fluctuation(%)
+            Fluctuation
             <div class="mt-0 content mb-0">
               <div class="row">
-                <div class="col-6 text-left"><span class="ml-15">24h</span> <br> ${data[i]['24h%']}</div>
-                <div class="col-6 text-right"><span class="mr-15">7d</span> <br> ${data[i]['7d%']}</div>
+                <div class="col-6 text-left"><span class="font-weight-bold ml-15">24h</span> <br> ${data[i]['24h%']}</div>
+                <div class="col-6 text-right"><span class="font-weight-bold mr-15">7d</span> <br> ${data[i]['7d%']}</div>
               </div>
             </div>
           </div>
-          <p class="text-muted">Market Cap: ${data[i]['marketCap']}</p>
-          <p class="text-muted">Circulating Supply: ${data[i]['circulatingSupply']}</p>
+          <p class="text-muted">Market Cap:
+          <br>
+          ${data[i]['marketCap']}</p>
+          <p class="text-muted">Circulating Supply:
+          <br>
+          ${data[i]['circulatingSupply']}</p>
         </div>
       
         <div class="border-left border-bottom mt-20">${data[i]['last7days']}</div>
