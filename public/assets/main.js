@@ -17,11 +17,12 @@ const url = '/api/coinInfo'
 const apicall = async () => {
   const response = await fetch(url)
   var data = await response.json();
+  console.log(data);
   topFour.innerHTML = ""
   for(var i = 0; i <= 3; i++){
     topFour.innerHTML = topFour.innerHTML + 
     `<div class="col-md-3 mw-full">
-      <div class="card p-1 ml-15 mr-15">
+      <div class="card p-1 ml-10 mr-10" style="height:28.5rem">
         <div class="text-center">
           <h3 class="mt-0 mb-0">${data[i]['name']}</h3>
           <p class="text-muted">Price: ${data[i]['price']}</p>
@@ -42,7 +43,7 @@ const apicall = async () => {
           ${data[i]['circulatingSupply']}</p>
         </div>
       
-        <div class="border-left border-bottom mt-20">${data[i]['last7days']}</div>
+        <!-- <div class="border-left border-bottom mt-20">${data[i]['last7days']}</div> --> 
       </div>
     </div>`
   }
@@ -51,11 +52,10 @@ const apicall = async () => {
       `<div class="6th-10th row mb-15 mt-15 font-size-16">
         <div class="col-md-1 font-weight-bold">${data[i]['rank']}</div>
         <div class="col-md-2">${data[i]['name']}</div>
-        <div class="col-md-1">${data[i]['price']}</div>
+        <div class="col-md-2">${data[i]['price']}</div>
         <div class="col-md-1">${data[i]['24h%']}</div>
         <div class="col-md-1">${data[i]['7d%']}</div>
-        <div class="col-md-2">${data[i]['marketCap']}</div>
-        <div class="col-md-2">${data[i]['volume']}</div>
+        <div class="col-md-2" style="margin-left:4rem;">${data[i]['marketCap']}</div>
         <div class="col-md-2">${data[i]['circulatingSupply']}</div>
       </div>`
   }
