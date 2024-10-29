@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- font awsome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
+
+  <!-- Halfmoon CSS -->
+  <link href="./assets/halfmoon-variables.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/main.css">
+
+  <title>CryptoTracker</title>
+  <!-- <link rel="icon" href="./assets/favicon.ico" type="image/icon type"> -->
+</head>
+
+<body class="dark-mode">
+  <nav class="navbar mb-5">
+    <a href="#" class="navbar-brand ml-10 ml-sm-20">
+      <!-- <img src="./assets/favicon.ico" alt="fake-logo"> -->
+      <span class="d-none d-sm-flex">CryptoTracker</span>
+    </a>
+    <div class="navbar-content ml-auto">
+      <button class="btn btn-action mr-5" type="button" onclick="halfmoon.toggleDarkMode()">
+        <i class="fa fa-moon-o" aria-hidden="true"></i>
+        <span class="sr-only">Toggle dark mode</span>
+      </button>
+    </div>
+  </nav>
+  <div class="m-5 p-5">
+    <div class="container-xl col-md-10 pt-md-5">
+      <div class="row" id="topFour"></div>
+      <div id='tableTitles' class="row card mb-0 pt-15 pb-15 font-size-16">
+        <div class="col-md-1">#</div>
+        <div class="col-md-2">Name</div>
+        <div class="col-md-2">Price</div>
+        <div class="col-md-1">24h%</div>
+        <div class="col-md-1">7d%</div>
+        <div class="col-md-2" style="margin-left:3rem;">Market Cap</div>
+        <div class="col-md-2">Circulating Supply</div>
+      </div>
+      <div class="card mt-10" id="topTen"></div>
+    </div>
+  </div>
+
+</body>
+
+<!-- Halfmoon JS -->
+<script src="./assets/halfmoon.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="./assets/main.js"></script>
+
+<script src="https://kit.fontawesome.com/b99bead543.js" crossorigin="anonymous"></script>
+</html>

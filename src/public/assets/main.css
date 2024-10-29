@@ -1,0 +1,46 @@
+/* Global styles */
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  /*Scroll bar Styling for mozilla firefox*/
+  scrollbar-width: thin;
+  /* "auto" or "thin"  */
+  scrollbar-color: #323739 rgb(19, 19, 19);
+  /* scroll thumb & track */
+}
+
+/* Scroll bar styling */
+
+/* width */
+
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+::-webkit-scrollbar:hover {
+  width: 10px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+  background: inherit;
+  opacity: 0.4;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+  background: #323739;
+  border-radius: 3.5px;
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+  background: #323739;
+}
+
+/* scroll bar style end *
